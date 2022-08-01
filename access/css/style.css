@@ -1,0 +1,206 @@
+@font-face {
+    font-family: PTSans-I;
+    src: url("../fonts/PT_Sans-Web-Italic.ttf") format("truetype");
+    font-style: normal; 
+}
+body{
+    font-family: 'PTSans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #767676;
+    margin: auto;
+}
+a{
+    color: white;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    padding: 50px 15%;
+    background-color: #dcdcdc;
+}
+.header-logo{
+    width: 50px;
+    height: 50px;
+    background-color: #767676;
+}
+.header-company-name{
+    margin-left: 1%;
+    font-size: 24px;
+}
+.header-company-contacts{
+    margin-left: auto;
+    font-size: 36px;
+    line-height: 40px;
+    font-family: 'PTSans-I', sans-serif;
+}
+.feedback{
+    font-size: 22px;
+    margin: 0;
+    width: fit-content;
+    float: right;
+    font-weight: bold;
+    font-family: 'PTSans', sans-serif;
+    text-decoration: dashed underline;
+}
+.feedback:hover{
+    text-decoration: solid underline;
+    cursor: pointer;
+    color:#878787;
+}
+.popup{
+    position: absolute;
+    width: 25%;
+    height: 60%;
+    top: 20%;
+    left: 40%;
+    right: 40%;
+    background-color: white;
+
+}
+.popup-close-button{
+    position: absolute; 
+    top: -20px; 
+    right: -20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    background-color: #777777;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: visible;
+    opacity: 1;
+  }
+.popup h3{
+    text-align: center;
+    font-size: 24px;
+    color: #777777;
+}
+.form-content{
+    text-align: center;
+}
+.popup-submit-button{
+    width: auto;
+    background-color: #777777;
+    color: white;
+    font-size: 16px;
+    padding: 0.5em;
+}
+input, textarea{
+    width: 70%;
+    padding: 5px;
+    margin: 2%;
+    display: inline-block;
+    border: 1px solid lightblue;
+    background: white;
+}
+.header-menu{
+    background-color: #777777;
+    color: white;
+    text-align: center;
+    padding: 0 12%;
+}
+.header-menu-ul{
+    list-style-type: none;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin: 0;
+}
+.header-menu-ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.header-menu-ul li{
+    padding: 0 3%;
+}
+.header-menu-ul li:not(:last-child){
+    padding: 0 3%;
+    border-right: 2px solid white;
+}
+.header-menu-ul li a{
+    text-decoration: none;
+}
+.slider{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: flex-end;
+}
+.slider img{
+    width: 1248px;
+    height: 462px;
+}
+.main-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15%;
+}
+.news-container{
+    box-sizing: border-box;
+    width: 40%;
+    padding: 2% 3%;
+    padding-right: 5%;
+    padding-bottom: 8%;
+    display: flex;
+    flex-direction: column;
+    background-color: #777777;
+    color: #FFFFFF;
+}
+.news-container h2{
+    font-size: 32px;
+    margin: 10px 0;
+}
+.news{
+    margin: 25px 0;
+}
+.news p{
+    margin: 0;
+}
+.news a{
+    text-decoration: none;
+}
+.date{
+    font-style: italic;
+}
+.archive-news{
+    float: right;
+}
+.content-container{
+    width: 65%;
+    margin-left: 50px;
+    text-align: justify;
+}
+.footer-container{
+    margin-top: 15%;
+    padding: 50px 17%;
+    display: flex;
+    background-color: #777777;
+    justify-content: space-between;
+    color: white;
+}
+.footer-mark p{
+    margin: 0;
+}
+.footer-menu ul{
+    list-style-type: none;
+    margin: 0;
+}
+.footer-company-name p{
+    margin: 0 5px;
+    float: right;
+}
