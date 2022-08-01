@@ -22,20 +22,21 @@
                         +7(499) 777-77-77<br>
                         +7(499) 777-77-77
                     </p>
-                    <p class="feedback">Обратная связь</p>
+                    <p class="feedback" onclick="popup()">Обратная связь</p>
                 </div>
-                <div class="popup">
+                <div id="overlay" style="visibility: hidden;"></div>
+                <div class="popup" id="popup">
                     <form action="#">
                         <div class="form-container">
-                            <a class="popup-close-button" href="#popup1"><img src="./access/img/close_pic.png" alt="close popup button" width="20px"></a>
+                            <a class="popup-close-button" onclick="closePopup()"><img src="./access/img/close_pic.png" alt="close popup button" width="20px"></a>
                             <div class="form-content">
                                 <h3>ОБРАТНАЯ СВЯЗЬ</h3>
                                 <label for="usrname">Ваше имя*</label><br>
-                                <input type="text" name="usrname"><br>
+                                <input type="text" name="usrname" ><br>
                                 <label for="phone-number">Телефон*</label><br>
                                 <input type="tel" name="phone-number"><br>
                                 <label for="email">Email*</label><br>
-                                <input type="email" name="email"><br>
+                                <input type="email" name="email" required placeholder="Поле обезательно для заполнения"><br>
                                 <label for="message-area">Сообщение</label><br>
                                 <textarea style="height: 100px;"></textarea>
                                 <input type="submit" value="ОТПРАВИТЬ" class="popup-submit-button">  
@@ -137,4 +138,5 @@
         </div>
     </footer>
 </body>
+<script src="./access/js/popup.js"></script>
 </html>

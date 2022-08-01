@@ -55,12 +55,15 @@ a{
 .popup{
     position: absolute;
     width: 25%;
-    height: 60%;
+    height: auto;
     top: 20%;
     left: 40%;
     right: 40%;
     background-color: white;
-
+    visibility: hidden;
+    opacity: 0;
+    padding: 30px 0;
+    transition: all ease-in-out .5s;
 }
 .popup-close-button{
     position: absolute; 
@@ -71,17 +74,20 @@ a{
     color: white;
     background-color: #777777;
 }
-.overlay {
-    position: absolute;
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: visible;
-    opacity: 1;
-  }
+    bottom: 0;
+    background-color: #7c7c7c; /* Black background with opacity */
+    z-index: 2;
+    cursor: pointer; /* Add a pointer on hover */
+    opacity: 50%;
+    transition: all ease-in-out .5s;
+}
 .popup h3{
     text-align: center;
     font-size: 24px;
@@ -99,11 +105,16 @@ a{
 }
 input, textarea{
     width: 70%;
-    padding: 5px;
     margin: 2%;
+    padding: 5px 10px;
     display: inline-block;
     border: 1px solid lightblue;
     background: white;
+}
+input[type="email"]::-webkit-input-placeholder {
+    font-style: italic;
+    color: red;
+    opacity: 60%;
 }
 .header-menu{
     background-color: #777777;
