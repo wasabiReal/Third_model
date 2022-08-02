@@ -69,48 +69,86 @@
     <main>
         <div class="container">
             <div class="slider">
-                <img src="./access/img/slider.png" width="80%" height="100%" alt="Slider image">
+                <!-- <img src="./access/img/slider.png" width="80%" height="100%" alt="Slider image"> -->
+                <div class="slider-container">
+                    <div class="mySlides fade">
+                        <p class="slider-text">1</p>
+                      <img src="./access/img/slider.png" alt="Slider image 1">
+                    </div>
+                    <div class="mySlides fade">
+                        <p class="slider-text">2</p>
+                      <img src="./access/img/slider80.png" alt="Slider image2">
+                    </div>
+                    <div class="mySlides fade">
+                        <p class="slider-text">3</p>
+                      <img src="./access/img/slider60.png" alt="Slider image3">
+                    </div>
+                    <div class="slider-buttons">
+                        <div class="prev-button">
+                            <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+                        </div>
+                        <div class="next-button">
+                            <a class="next" onclick="plusSlides(1)">&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                    <br>
+                    <div class="slider-dots">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
             </div>
             <div class="main-container">
-                <div class="news-container">
-                    <h2>Новости</h2>
-                    <div class="news-content">
-                        <div class="news">
-                            <div class="date">14 сентября 2013 .</div>
-                            <p><a href="#">Редизайн веб-сайта архитектурного бюро.</a></p>
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Бытовая техника</a></li>
+                    </ul>
+                </div>
+                <div class="wrapper-content">
+                    <div class="sidebar-container">
+                        <div class="sidebar">
+                            <ul style="list-style: none;">
+                                <li><a href="#">Автомобили</a></li>
+                                <li><a href="#" style="text-decoration: underline;">Бытовая техника</a>
+                                    <ul class="sidebar-li-content">
+                                        <li><a href="#" style="text-decoration: underline; color: black;">Микроволновки</a></li>
+                                        <li><a href="#">Холодильники</a></li>
+                                        <li><a href="#">Посудомоечные машины</a></li>
+                                        <li><a href="#">Чайники</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Мобильная техника</a></li>
+                                <li><a href="#">Компьютеры</a></li>
+                                <li><a href="#">Одежда</a></li>
+                                <li><a href="#">Недвижимость</a></li>
+                            </ul>
+                            <div class="pricelist">
+                                <img src="./access/img/prise_list.png" alt="Prise list picture" width="97px">
+                                <p class="pricelist-text">Прайс-лист</p>
+                            </div>
                         </div>
-                        <div class="news">
-                            <div class="date">14 сентября 2013 г.</div>
-                            <p><a href="#">Раскрутка интернет-магазина декоративных стикеров и виниловых наклеек.</a></p>
-                        </div>
-                        <div class="news">
-                            <div class="date">14 сентября 2013 г.</div>
-                            <p><a href="#">SEO-продвижение сайта поставщика дизель генераторов.</a></p>
-                        </div>
-                        <div class="news">
-                            <div class="date">14 сентября 2013 г.</div>
-                            <p><a href="#">Поисковое продвижение веб-сайта поставщика гидрооборудования.</a></p>
-                        </div>
-                        <div class="archive-news">
-                            <a href="#">Архив новостей</a>
+                    </div>
+                    <div class="content-container">
+                        <div class="content">
+                            <div class="products-container">
+                                <div class="product">
+                                    <img src="./access/img/nophoto.png" alt="Product picture 1">
+                                    <p class="product-name">Самый клевый чайник, который надо купить!</p>
+                                    <span class="product-price">1900 р.</span>
+                                    <img src="./access/img/basket.png" alt="basket 1">
+                                </div>
+                                <div class="product"></div>
+                                <div class="product"></div>
+                                <div class="product"></div>
+                                <div class="product"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="content-container">
-                    <h1 style="font-weight: 400;">Компания «Пиксель Плюс»</h1>
-                    <div class="infotext-container">
-                        <p class="text">Компания «Пиксель Плюс» существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем
-                            уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде.</p>
-                        <p class="text">Одним из основных направлений работ нашей компании является поисковое
-                            продвижение сайтов, на данной момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При
-                            этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения.
-                            На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе.</p>
-                        <p class="text">Наша компания является золотым сертифицированным партнёром «1С-Битрикс» (сертификат № 33939 с 2007 по 2013), что ещё раз
-                            подтверждает квалификацию наших сотрудников. В январе 2013 мы стали лидерами продаж продуктов «1С-Битрикс» и вошли в число лучших
-                            разработчиков сайтов России. Все специалисты занимающиеся изготовлением сайтов проходят обязательную сертификацию «1С-Битрикс»
-                            в течении первых 6 месяцев работы в компании, после чего продолжают непрерывно поддерживать и развивать свои профессиональные навыки.</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </main>
@@ -139,4 +177,5 @@
     </footer>
 </body>
 <script src="./access/js/popup.js"></script>
+<script src="./access/js/slider.js"></script>
 </html>

@@ -73,6 +73,7 @@ a{
     text-decoration: none;
     color: white;
     background-color: #777777;
+    cursor: pointer;
 }
 #overlay {
     position: fixed; /* Sit on top of the page content */
@@ -86,7 +87,7 @@ a{
     z-index: 2;
     cursor: pointer; /* Add a pointer on hover */
     opacity: 50%;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out .7s;
 }
 .popup h3{
     text-align: center;
@@ -151,50 +152,152 @@ input[type="email"]::-webkit-input-placeholder {
     justify-content: center;
     overflow: hidden;
     align-items: flex-end;
+    position: relative;
 }
 .slider img{
     width: 1248px;
     height: 462px;
 }
-.main-container{
+.slider-buttons{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+}
+.slider-dots{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+.slider-text{
+    position: absolute;
+    font-size: 200px;
+    top: 26%;
+    left: 32%;
+    text-shadow: 2px 2px 3px black;
+    margin: 0;
+    color: white;
+}
+  /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 22px 6px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 46px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: #DCDCDC;
+}
+  /* Position the "next button" to the right */
+.next {
+    /* right: 0; */
+    border-radius: 3px 0 0 3px;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(105, 105, 105, 0.8);
+}
+  
+  /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+  /* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+  /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+.main-container{
     padding: 20px 15%;
 }
-.news-container{
-    box-sizing: border-box;
-    width: 40%;
-    padding: 2% 3%;
-    padding-right: 5%;
-    padding-bottom: 8%;
+.wrapper-content{
     display: flex;
-    flex-direction: column;
-    background-color: #777777;
-    color: #FFFFFF;
-}
-.news-container h2{
-    font-size: 32px;
-    margin: 10px 0;
-}
-.news{
-    margin: 25px 0;
-}
-.news p{
-    margin: 0;
-}
-.news a{
-    text-decoration: none;
-}
-.date{
-    font-style: italic;
-}
-.archive-news{
-    float: right;
 }
 .content-container{
-    width: 65%;
+    width: 100%;
     margin-left: 50px;
-    text-align: justify;
+}
+.breadcrumbs{
+    margin-bottom: 20px;
+}
+.breadcrumbs a{
+    color: #767676;
+}
+.breadcrumbs ul li{
+    display: inline;
+}
+.breadcrumbs ul li:last-child a{
+    text-decoration: none;
+}
+.breadcrumbs ul li:not(:first-child):before {
+    padding-right: 5px;
+    color: #767676;
+    font-size: 14px;
+    content: "/\00a0"; 
+}
+.breadcrumbs ul li a:hover {
+    color: #767676;
+    text-decoration: none; 
+}
+
+.sidebar{
+    font-size: larger;
+}
+.sidebar a{
+    color: #767676;
+    text-decoration: none;
+}
+.sidebar ul li{
+    padding: 5px;
+}
+.sidebar-li-content{
+    list-style-type: disc;
+    padding-inline-start: 2em;
+    font-size: smaller;
+}
+.sidebar-li-content li{
+    padding: 0 !important;
+}
+.pricelist{
+    float: right;
+    text-align: end;
+}
+.pricelist-text{
+    margin: 0;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: right;
+}
+.product{
+    width: 250px;
+    background-color: #dcdcdc;
 }
 .footer-container{
     margin-top: 15%;
